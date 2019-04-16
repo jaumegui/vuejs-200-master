@@ -9,13 +9,18 @@
         <a href="#/people">Peoples</a>
       </span>
     </md-toolbar>
+    <span>Hello {{ name }}</span>
   </section>
 </template>
 
 <script>
 
   export default {
-
+    data(){
+      return {
+        name: "Guillaume"
+      }
+    }
   }
 </script>
 
