@@ -24,7 +24,7 @@
                   </div>
               </md-card-header-text>
               <md-card-media md-big>
-                  <img class="picture" :src= person.photo />
+                  <img class="picture" :src="person.photo" />
               </md-card-media>
           </md-card-header>
           <md-card-content>

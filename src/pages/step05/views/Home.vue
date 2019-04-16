@@ -51,7 +51,7 @@
         </md-card-content>
     </md-card>
     <section>
-        <md-button class="md-fab md-fab-bottom-right md-primary">
+        <md-button class="md-fab md-fab-bottom-right md-primary" @click="onClick">
             <md-icon>cached</md-icon>
         </md-button>
     </section>
@@ -69,7 +69,12 @@ export default {
     }
   },
   created:function(){
-    this.person=PEOPLE[0];
+    this.person = PEOPLE[0];
+  },
+  methods: {
+    onClick: function() {
+     this.person = PEOPLE[Math.floor(Math.random() * PEOPLE.length)];
+    }
   }
 }
 </script>

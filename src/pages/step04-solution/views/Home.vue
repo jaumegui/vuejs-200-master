@@ -54,19 +54,19 @@
 </template>
 
 <script>
-import PEOPLE from '../_static/people.js';
+  import PEOPLE from '../_static/people.js';
 
 
-export default {  
-  data(){
-    return {
-      person:{}
+  export default {  
+    data(){
+      return {
+        person:{}
+      }
+    },
+    created:function(){
+      this.person=PEOPLE[0];
     }
-  },
-  created:function(){
-    this.person=PEOPLE[0];
   }
-}
 </script>
 
 <style scoped>

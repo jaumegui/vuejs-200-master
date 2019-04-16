@@ -60,7 +60,7 @@
 
 <script>
 import PEOPLE from '../_static/people.js';
-
+import PeopleService from '../services/PeopleService'
 
 export default {  
   data(){
@@ -69,11 +69,13 @@ export default {
     }
   },
   created:function(){
-    this.person=PEOPLE[0];
+    PeopleService.fetch()
+       .then(people=>this.person=people[0])
   },
   methods:{
     random: function(){
-      this.person=PEOPLE[Math.floor(Math.random()*PEOPLE.length)];
+      PeopleService.fetchRandom()
+     .then(person =>this.person = person)
     }
   }
 }
