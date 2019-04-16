@@ -9,18 +9,11 @@
         <a href="#/people">Peoples</a>
     </span>
     </md-toolbar>
-    <sfeir-home></sfeir-home>
+    <router-view></router-view>
   </section>
 </template>
 
 <script>
-  import Home from './views/Home';
-
-  export default {
-    components:{
-      'sfeir-home':Home
-    }
-  }
 </script>
 
 <style scoped>

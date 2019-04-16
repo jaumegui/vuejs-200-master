@@ -1,6 +1,8 @@
 import VueRouter from 'vue-router'
 
 import Home from './Home.vue'
+import People from './People.vue'
+
 
 const routes = [
   {
@@ -11,6 +13,11 @@ const routes = [
   {
     path: '/',
     redirect: '/home'
+  },
+  {
+    name: 'people',
+    path: '/people',
+    component: People
   }
 ]
 

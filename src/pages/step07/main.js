@@ -4,9 +4,12 @@ import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import App from './App'
+import VueRouter from 'vue-router'
+import router from './views/router.js'
 
+
+Vue.use(VueRouter)
 Vue.use(VueMaterial)
-
 
 Vue.material.registerTheme('default', {
   primary: 'blue',
@@ -16,6 +19,7 @@ Vue.material.registerTheme('default', {
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',  
+  el: '#app',
+  router,
   render: h => h(App)
 })
