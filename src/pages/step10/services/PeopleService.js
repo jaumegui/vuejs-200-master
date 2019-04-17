@@ -10,5 +10,9 @@ export default {
     fetchRandom(){
         return axios.get(`${BACKEND_URL}/random`)
         .then(response =>response.data)    
+    },
+    deletePerson(id){
+      return axios.delete(`${BACKEND_URL}/${id}`)
+      .then(response => response.data)
     }
 }

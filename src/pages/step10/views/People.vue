@@ -1,6 +1,6 @@
 <template>
     <section class="container">
-      <sfeir-card  v-for="person in people" :person="person" :key="person.id"></sfeir-card>        
+      <sfeir-card  v-for="person in people" :person="person" :key="person.id" @delete="deletePerson"></sfeir-card>        
     </section>
 </template>
 

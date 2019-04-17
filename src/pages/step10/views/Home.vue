@@ -1,6 +1,6 @@
 <template>
   <section class="container">    
-    <sfeir-card :person="person"></sfeir-card>
+    <sfeir-card :person="person" @delete="random"></sfeir-card>
     <section>
         <md-button class="md-fab md-fab-bottom-right md-primary" @click="random">
             <md-icon>cached</md-icon>

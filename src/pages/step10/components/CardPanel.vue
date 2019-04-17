@@ -44,7 +44,7 @@
 						<a href="#">
 							<md-icon class="md-accent">mode_edit</md-icon>
 						</a>
-						<a href="#">
+						<a href="#" @click="personDelete">
 							<md-icon class="md-accent">delete</md-icon>
 						</a>
 					</md-layout>
@@ -55,7 +55,12 @@
 </template>
 <script>
 	export default {
-		props: ['person']		
+		props: ['person'],
+    methods: {
+      personDelete: function(){
+        this.$emit('delete',this.person)
+      }
+    }
 	}
 </script>
 <style>
